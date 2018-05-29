@@ -22,7 +22,7 @@ sh dotfilesLink.sh
  ```shell
 cd ~/dotfiles
 git add .
-git commit -m <追加したファイル>
+git commit -m <更新メッセージ>
 git push origin master 
 ```
 
