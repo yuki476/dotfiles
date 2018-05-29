@@ -28,7 +28,7 @@ git push origin master
 
 2. 更新のみ
 ```shell
-git commit -a -m <更新したファイル>
+git commit -a -m <更新メッセージ>
 git push origin master
 ```
 
