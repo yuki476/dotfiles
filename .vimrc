@@ -28,7 +28,7 @@ if &term =~ "xterm"
     inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
-" ### マウスでカーソル・スクロール移動可 ######
+"" ### マウスでカーソル・スクロール移動可 ######
 if has('mouse')
     set mouse=a
     if has('mouse_sgr')
