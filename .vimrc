@@ -14,7 +14,6 @@ set wildmenu
 set history=5000
 set laststatus=2
 
-
 "" ### クリップボードからのPaste時に自動インデント無効化 ######
 if &term =~ "xterm"
     let &t_SI .= "\e[?2004h"
@@ -29,8 +28,8 @@ if &term =~ "xterm"
     inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
-
-"" ### マウスでカーソル・スクロール移動可 ######
+" ### test
+" ### マウスでカーソル・スクロール移動可 ######
 if has('mouse')
     set mouse=a
     if has('mouse_sgr')
@@ -41,4 +40,3 @@ if has('mouse')
         set ttymouse=xterm2
     endif
 endif
-
