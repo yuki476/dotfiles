@@ -1,5 +1,6 @@
 colorscheme molokai
 
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -38,6 +39,7 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
 
 set number
 set cursorline
@@ -79,5 +81,4 @@ if has('mouse')
         set ttymouse=xterm2
     endif
 endif
-
 
