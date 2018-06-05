@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 colorscheme monokai
-=======
-colorscheme molokai
->>>>>>> 070d7353c36695dc8580ec81158b2220149a9d68
-
 
 "dein Scripts-----------------------------
 if &compatible
