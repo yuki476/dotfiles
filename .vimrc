@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 colorscheme monokai
+=======
+colorscheme molokai
+>>>>>>> 070d7353c36695dc8580ec81158b2220149a9d68
 
 
 "dein Scripts-----------------------------
@@ -50,7 +54,7 @@ set tabstop=4
 set hlsearch
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 set ambiwidth=double
-set clipboard+=unnamed
+set clipboard+=unnamed,autoselect
 
 set wildmenu
 set history=5000
