@@ -51,9 +51,19 @@ nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 set ambiwidth=double
 set clipboard+=unnamed,autoselect
 
+" コマンドラインに使われる画面上の行数
+set cmdheight=2
+" エディタウィンドウの末尾から2行目にステータスラインを常時表示させる
+set laststatus=2
+" ウインドウのタイトルバーにファイルのパス情報等を表示する
+set title
+
 set wildmenu
 set history=5000
-set laststatus=2
+
+syntax on
+"" #### 行番号の色 #########
+highlight LineNr ctermfg=darkyellow
 
 "" ### クリップボードからのPaste時に自動インデント無効化 ######
 if &term =~ "xterm"
