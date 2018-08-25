@@ -1,4 +1,4 @@
-colorscheme molokai
+colorscheme mycolors
 
 "dein Scripts-----------------------------
 if &compatible
@@ -83,7 +83,7 @@ hi CursorLineNr cterm=bold
 
 " カーソル位置の縦横線表示
 set cursorline
-hi CursorLine cterm=underline ctermfg=blue ctermbg=NONE
+" hi CursorLine cterm=underline ctermfg=blue ctermbg=NONE
 set cursorcolumn
 
 " beep音の視覚化

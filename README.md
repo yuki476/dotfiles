@@ -11,7 +11,6 @@ dotfilesの使い方
 #### 使うとき
 
 ```shell
-mkdir ~/dotfiles
 cd ~/
 git clone https://github.com/yuki476/dotfiles.git
 sh dotfilesLink.sh
