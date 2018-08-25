@@ -7,7 +7,7 @@
 " by Wimer Hazenberg and its darker variant
 " by Hamish Stuart Macpherson
 "
-”molokaiを元に自分で更に改変
+" molokaiを元に自分で更に改変
 "
 " 推奨されている色名 (これらはほとんどのシステムで利用可能である)
 "     Red         LightRed        DarkRed
