@@ -33,7 +33,7 @@ set laststatus=2
 set t_Co=256 "この設定が無いと色がちゃんと出ないi
 set showtabline=2 "常にタブラインを表示
 let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#left_sep = '|'
@@ -48,6 +48,8 @@ let g:airline#extensions#ale#warning_symbol = '§ '
 let g:airline#extensions#default#section_truncate_width = {}
 let g:airline#extensions#whitespace#enabled = 1
 
+" backspaceの有効化
+set backspace=indent,eol,start
 
 " 行番号
 set number
@@ -72,12 +74,14 @@ set clipboard+=unnamed,autoselect
 " コマンドラインに使われる画面上の行数
 set cmdheight=2
 " エディタウィンドウの末尾から2行目にステータスラインを常時表示させる
-set laststatus=2
-set statusline=%F%f%h=
-" ウインドウのタイトルバーにファイルのパス情報等を表示する  
+set laststatus=2 "ステータスラインを常に表示
+set showmode "現在のモードを表示
+"set showcmd "売ったコマンドをステータスラインの下に表示
+set statusline=%F%f%h= " ウインドウのタイトルバーにファイルのパス情報等を表示する  
 set title
 
 set wildmenu
+set wildmode=list:longest
 set history=5000
 
 syntax on
