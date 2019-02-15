@@ -95,7 +95,7 @@ endif
 
 
 "" #### 行番号の色 #########
-" highlight LineNr ctermfg=darkyellow
+ highlight LineNr ctermfg=darkyellow
 
 "" ### クリップボードからのPaste時に自動インデント無効化 ######
 if &term =~ "xterm"
