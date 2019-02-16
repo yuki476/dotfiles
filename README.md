@@ -24,7 +24,7 @@ git clone https://github.com/yuki476/dotfiles.git
 sh ~/dotfiles_link.sh
 ```
 
-自動で必要ファイル/ディレクトリんの生成・リンク作成
+自動で必要ファイル/ディレクトリの生成・リンク作成
 
 
 -------------
