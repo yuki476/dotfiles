@@ -1,5 +1,3 @@
-colorscheme mycolors
-
 " ####### Vundle ###############################
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -30,7 +28,7 @@ let g:winresizer_horiz_resize = 1
 " ## vim-airline
 let g:airline_theme = 'molokai'
 set laststatus=2
-set t_Co=256 "この設定が無いと色がちゃんと出ないi
+set t_Co=256 "この設定が無いと色がちゃんと出ない
 set showtabline=2 "常にタブラインを表示
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 2
@@ -48,17 +46,22 @@ let g:airline#extensions#ale#warning_symbol = '§ '
 let g:airline#extensions#default#section_truncate_width = {}
 let g:airline#extensions#whitespace#enabled = 1
 
+
+" #### 色関連の設定はcolorの方で行うこと
+
 " backspaceの有効化
 set backspace=indent,eol,start
 
 " 行番号
 set number
-hi CursorLineNr cterm=bold
 
 " カーソル位置の縦横線表示
 set cursorline
-" hi CursorLine cterm=underline ctermfg=blue ctermbg=NONE
 set cursorcolumn
+
+" 不可視文字を表示 tab/改行
+set list
+set listchars=tab:»-,eol:↲,extends:»
 
 " beep音の視覚化
 set visualbell
@@ -68,8 +71,9 @@ set tabstop=4
 
 " 検索ハイライト
 set hlsearch
-" ハイライトをEsc二連打で無効化
+" 検索ハイライトをEsc二連打で無効化
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
+
 set ambiwidth=double
 set clipboard+=unnamed,autoselect
 
@@ -78,7 +82,7 @@ set cmdheight=2
 " エディタウィンドウの末尾から2行目にステータスラインを常時表示させる
 set laststatus=2 "ステータスラインを常に表示
 set showmode "現在のモードを表示
-"set showcmd "売ったコマンドをステータスラインの下に表示
+set showcmd "打ったコマンドをステータスラインの下に表示
 set statusline=%F%f%h= " ウインドウのタイトルバーにファイルのパス情報等を表示する  
 set title
 
@@ -100,20 +104,16 @@ endif
 "set virtualedit=all
 
 
-"" #### 行番号の色 #########
- highlight LineNr ctermfg=darkyellow
 
 "" ### クリップボードからのPaste時に自動インデント無効化 ######
 if &term =~ "xterm"
     let &t_SI .= "\e[?2004h"
     let &t_EI .= "\e[?2004l"
     let &pastetoggle = "\e[201~"
-
     function XTermPasteBegin(ret)
         set paste
         return a:ret
     endfunction
-
     inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
@@ -128,3 +128,6 @@ if has('mouse')
         set ttymouse=xterm2
     endif
 endif
+
+
+colorscheme mycolors

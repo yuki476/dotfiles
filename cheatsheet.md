@@ -14,14 +14,14 @@
 - `:vsp [file]` : 縦に分割 ファイル名つけるとそれで開く
 - `:sp [file]` : 横に分割           〃
 - `:edit <ファイル> : ファイルを作成
-- `:vsp vimdiff <file1> [file2] : diffとる。vsなしで横分割。file1のみで今のとのdiff
+- `:vimdiff <file1> [file2] : diffとる。file1のみで今のとのdiff
 
 ## タブ/ウィンドウ移動
 - `gt` : 次のタブ
 - `gT` : 前のタブ
 - `Ctrl-w > h/j/k/l` : ウィンドウ間の移動
 - `Ctrl-w > H/J/K/L` : ウィンドウ自体を移動
-- `Ctrl-e` : 幅調整モードへ移行 h/j/k/lで調整  
+- `Ctrl-e` : サイズ調整モードへ移行 h/j/k/lで調整  
 
 ## move
 - `^`: 行頭まで移動 `0`はインデント無視
