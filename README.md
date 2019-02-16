@@ -1,33 +1,35 @@
 dotfilesの使い方
 ===
 
-## とりあえずvimの設定だけ追加した
-- .vimrc
-- colors
+- とりあえずvimの設定だけ追加した
+    - `.vimrc` : vim設定ファイル
+    - `colors` : colorscheme用ディレクトリ
 
-#### 対象ファイルを`~/dotflies`に移して使う
-`dotfiles_link.sh`で自動で必要ファイル/ディレクトリ作成
 
-#### 使うとき
+## 使い方
 
-1. ファイル取ってくる
+### 1. ファイル取ってくる
 
 ```shell
 cd ~/
 git clone https://github.com/yuki476/dotfiles.git
-sh dotfiles_link.sh
 ```
 
-2. Pluginマネージャーを入れる
+### 2. Pluginマネージャーを入れる
 - [Vundle](https://github.com/VundleVim/Vundle.vim)を使用。
 
-3. `dotfiles_link.sh`を実行
+### 3. `dotfiles_link.sh`を実行
 
+```bash
+sh ~/dotfiles_link.sh
+```
+
+自動で必要ファイル/ディレクトリんの生成・リンク作成
+
+
+-------------
 
 ###### [参考資料：dotfilesをGitHubで管理](http://bit.ly/2sfDSqb)
-
-
-
 
 
 
