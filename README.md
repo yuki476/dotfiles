@@ -1,10 +1,10 @@
 dotfilesの使い方
 ===
 
-- とりあえずvimの設定だけ追加した
-    - `.vimrc` : vim設定ファイル
-    - `colors` : colorscheme用ディレクトリ
-
+#### とりあえずvimの設定だけ追加した
+- `.vimrc` : vim設定ファイル
+- `colors` : colorscheme用ディレクトリ
+- `show256colors.pl` : colorschemeで使える色見本。perlで叩く。
 
 ## 使い方
 
