@@ -54,6 +54,8 @@ set backspace=indent,eol,start
 
 " 行番号
 set number
+"列番号も一応あるようだが設定方法がよく分からん
+"set ruler
 
 " カーソル位置の縦横線表示
 set cursorline
