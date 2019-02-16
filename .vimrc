@@ -5,9 +5,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" ### Vundle事態の
+" ### Vundle自体のインストール
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'reireias/vim-cheatsheet'
 Plugin 'simeji/winresizer'
 Plugin 'vim-airline/vim-airline'
@@ -66,7 +66,9 @@ set visualbell
 set expandtab
 set tabstop=4
 
+" 検索ハイライト
 set hlsearch
+" ハイライトをEsc二連打で無効化
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 set ambiwidth=double
 set clipboard+=unnamed,autoselect
