@@ -27,7 +27,7 @@ let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
 
 " ## vim-airline
-let g:airline_theme = 'dark'
+let g:airline_theme = 'molokai'
 set laststatus=2
 set t_Co=256 "この設定が無いと色がちゃんと出ない
 set showtabline=2 "常にタブラインを表示
@@ -40,17 +40,18 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#left_sep = '|'
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#wordcount#enabled = 0
+let g:airline#extensions#wordcount#enabled = 1
 let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'y', 'z']]
-let g:airline_section_c = '%t'
+"let g:airline_section_b = '%{&branch}'
+"let g:airline_section_c = '%t'
 let g:airline_section_x = '%{&filetype}'
 let g:airline_section_z = '%3l:%2v %{airline#extensions#ale#get_warning()} %{airline#extensions#ale#get_error()}'
 let g:airline#extensions#ale#error_symbol = '‡ '
 let g:airline#extensions#ale#warning_symbol = '§ '
 let g:airline#extensions#default#section_truncate_width = {}
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline_powerline_fonts=1
-let g:airline_powerline_symbols=1
+let g:airline#extensions#airline_powerline_fonts=1
+let g:airline#extensions#airline_powerline_symbols=1
 
 " ## powerlinesi
 
