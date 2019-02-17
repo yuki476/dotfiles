@@ -33,29 +33,34 @@ if version > 580
 endif
 let g:colors_name="mycolors"
 
-hi Boolean         ctermfg=135
+" 数字/文字/コメント etc.
+hi Boolean         ctermfg=196
 hi Character       ctermfg=144
-hi Number          ctermfg=135
+hi Number          ctermfg=165
 hi String          ctermfg=144
 hi Conditional     ctermfg=161               cterm=bold
 hi Constant        ctermfg=135               cterm=bold
-hi Comment         ctermfg=245
+hi Comment         ctermfg=60
+
+" 不可視文字の色
+hi SpecialKey      ctermfg=18
+hi NonText         ctermfg=18
 
 " 現在行の表示
 hi Cursor          ctermfg=16  ctermbg=253
-hi CursorLine                  ctermbg=17    cterm=underline
-hi CursorColumn                ctermbg=17
+hi CursorLine                  ctermbg=235    cterm=underline
+hi CursorColumn                ctermbg=233
 hi ColorColumn                 ctermbg=236
 " 行番号の表示
-hi LineNr          ctermfg=208 ctermbg=236   cterm=bold
-hi CursorLineNr    ctermfg=236 ctermbg=236
+hi LineNr          ctermfg=208 ctermbg=236   cterm=NONE
+hi CursorLineNr    ctermfg=236 ctermbg=208   cterm=bold
 
 hi Debug           ctermfg=225               cterm=bold
-hi Define          ctermfg=81
+hi Define          ctermfg=75
 hi Delimiter       ctermfg=241
 
 hi DiffAdd                     ctermbg=24
-hi DiffChange      ctermfg=181 ctermbg=239
+hi DiffChange      ctermfg=226 ctermbg=239
 hi DiffDelete      ctermfg=162 ctermbg=53
 hi DiffText                    ctermbg=102   cterm=bold
 
@@ -74,9 +79,9 @@ hi IncSearch       ctermfg=193 ctermbg=16
 hi keyword         ctermfg=161               cterm=bold
 hi Label           ctermfg=229               cterm=none
 hi Macro           ctermfg=193
-hi SpecialKey      ctermfg=81
 
-hi MatchParen      ctermfg=233  ctermbg=208 cterm=bold
+" 括弧の対応色 ()
+hi MatchParen      ctermfg=202  ctermbg=17   cterm=bold
 hi ModeMsg         ctermfg=229
 hi MoreMsg         ctermfg=229
 hi Operator        ctermfg=161
@@ -91,10 +96,12 @@ hi PreCondit       ctermfg=118               cterm=bold
 hi PreProc         ctermfg=118
 hi Question        ctermfg=81
 hi Repeat          ctermfg=161               cterm=bold
-hi Search          ctermfg=0   ctermbg=222   cterm=NONE
+" 検索文字列
+hi Search          ctermfg=154   ctermbg=241 cterm=bold
 
 " marks column
-hi SignColumn      ctermfg=118 ctermbg=235
+" git情報表示列
+hi SignColumn      ctermfg=118 ctermbg=236
 hi SpecialChar     ctermfg=161               cterm=bold
 hi SpecialComment  ctermfg=245               cterm=bold
 hi Special         ctermfg=81
@@ -122,10 +129,6 @@ hi VisualNOS                   ctermbg=238
 hi Visual                      ctermbg=235
 hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
 hi WildMenu        ctermfg=81  ctermbg=16
-
-hi NonText         ctermfg=59
-
-hi SpecialKey      ctermfg=59
 
 
 " Must be at the end, because of ctermbg=234 bug.

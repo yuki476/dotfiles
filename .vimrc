@@ -10,6 +10,7 @@ Plugin 'reireias/vim-cheatsheet'
 Plugin 'simeji/winresizer'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Lokaltog/vim-powerline'
 Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
@@ -30,7 +31,10 @@ let g:airline_theme = 'molokai'
 set laststatus=2
 set t_Co=256 "この設定が無いと色がちゃんと出ない
 set showtabline=2 "常にタブラインを表示
-let g:airline#extensions#branch#enabled = 1
+" branch表示
+let g:airline#extensions#branch#enabled = 0
+" 読み取りマーク表示
+let g:airline#extensions#readonly#enabled = 1
 let g:airline#extensions#tabline#enabled = 2
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -44,18 +48,19 @@ let g:airline_section_z = '%3l:%2v %{airline#extensions#ale#get_warning()} %{air
 let g:airline#extensions#ale#error_symbol = '‡ '
 let g:airline#extensions#ale#warning_symbol = '§ '
 let g:airline#extensions#default#section_truncate_width = {}
-let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
 
 
 " #### 色関連の設定はcolorの方で行うこと
+
+set encoding=utf-8
+scriptencoding utf-8
 
 " backspaceの有効化
 set backspace=indent,eol,start
 
 " 行番号
 set number
-"列番号も一応あるようだが設定方法がよく分からん
-"set ruler
 
 " カーソル位置の縦横線表示
 set cursorline
@@ -63,7 +68,10 @@ set cursorcolumn
 
 " 不可視文字を表示 tab/改行
 set list
-set listchars=tab:»-,eol:↲,extends:»
+set listchars=tab:>-,eol:$
+" git差分情報表示行
+set signcolumn=yes
+
 
 " beep音の視覚化
 set visualbell
@@ -120,16 +128,16 @@ if &term =~ "xterm"
 endif
 
 "" ### マウスでカーソル・スクロール移動可 ######
-if has('mouse')
-    set mouse=a
-    if has('mouse_sgr')
-        set ttymouse=sgr
-    elseif v:version > 703 || v:version is 703 && has('patch632')
-        set ttymouse=sgr
-    else
-        set ttymouse=xterm2
-    endif
-endif
+"if has('mouse')
+"    set mouse=a
+"    if has('mouse_sgr')
+"        set ttymouse=sgr
+"    elseif v:version > 703 || v:version is 703 && has('patch632')
+"        set ttymouse=sgr
+"    else
+"        set ttymouse=xterm2
+"    endif
+"endif
 
 
 colorscheme mycolors
