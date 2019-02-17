@@ -50,6 +50,10 @@ let g:airline#extensions#ale#warning_symbol = '§ '
 let g:airline#extensions#default#section_truncate_width = {}
 let g:airline#extensions#whitespace#enabled = 0
 
+" ## powerlines
+set guifont=Inconsolata_for_Powerline:h11:cANSI
+let g:Powerline_symbols='fancy'
+
 
 " #### 色関連の設定はcolorの方で行うこと
 
