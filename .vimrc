@@ -27,7 +27,7 @@ let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
 
 " ## vim-airline
-let g:airline_theme = 'molokai'
+let g:airline_theme = 'dark'
 set laststatus=2
 set t_Co=256 "この設定が無いと色がちゃんと出ない
 set showtabline=2 "常にタブラインを表示
@@ -49,9 +49,13 @@ let g:airline#extensions#ale#error_symbol = '‡ '
 let g:airline#extensions#ale#warning_symbol = '§ '
 let g:airline#extensions#default#section_truncate_width = {}
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline_powerline_fonts=1
+let g:airline_powerline_symbols=1
 
-" ## powerlines
-set guifont=Inconsolata_for_Powerline:h11:cANSI
+" ## powerlinesi
+
+set guifont=RictyDiscord-Regular-Powerline.ttf
+"set guifont=Inconsolata_for_Powerline:h11:cANSI
 let g:Powerline_symbols='fancy'
 
 
@@ -145,3 +149,4 @@ endif
 
 
 colorscheme mycolors
+
