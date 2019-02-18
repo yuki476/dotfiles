@@ -44,7 +44,7 @@ let g:Powerline_symbols='fancy'
 " airline-branch
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#vcs_priority = ["git", "mercurial"]
-
+let g:airline#extensions#branch#empty_message = ''
 
 let g:airline#extensions#readonly#enabled = 1
 let g:airline#extensions#tabline#enabled = 2
