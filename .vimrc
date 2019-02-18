@@ -10,6 +10,7 @@ Plugin 'reireias/vim-cheatsheet'
 Plugin 'simeji/winresizer'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'ryanoasis/vim-devicons'
 
@@ -18,6 +19,8 @@ filetype plugin indent on
 " ##############################################
 
 " ###### Plugin-settings ################
+scriptencoding utf-8
+
 
 " ## vim-cheatseet
 let g:cheatsheet#cheat_file = '~/.vim/cheatsheet.md' "cheetsheet指定
@@ -27,43 +30,35 @@ let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
 
 " ## vim-airline
-let g:airline_theme = 'molokai'
+let g:airline_theme = 'simple'
 set laststatus=2
 set t_Co=256 "この設定が無いと色がちゃんと出ない
 set showtabline=2 "常にタブラインを表示
-" branch表示
-let g:airline#extensions#branch#enabled = 0
-" 読み取りマーク表示
+
+" airline extension ON
+
+
+let g:airline_powerline_fonts=1
+let g:Powerline_symbols='fancy'
+
+" airline-branch
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#vcs_priority = ["git", "mercurial"]
+
+
 let g:airline#extensions#readonly#enabled = 1
 let g:airline#extensions#tabline#enabled = 2
-let g:airline#extensions#tabline#fnamemod = ':t'
+
+" 読み取りマーク表示
+"let g:airline#extensions#tabline#fnamemod = ':t'
+" タブに番号表示
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#left_sep = '|'
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#wordcount#enabled = 1
 let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'y', 'z']]
-"let g:airline_section_b = '%{&branch}'
-"let g:airline_section_c = '%t'
-let g:airline_section_x = '%{&filetype}'
-let g:airline_section_z = '%3l:%2v %{airline#extensions#ale#get_warning()} %{airline#extensions#ale#get_error()}'
-let g:airline#extensions#ale#error_symbol = '‡ '
-let g:airline#extensions#ale#warning_symbol = '§ '
-let g:airline#extensions#default#section_truncate_width = {}
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#airline_powerline_fonts=1
-let g:airline#extensions#airline_powerline_symbols=1
-
-" ## powerlinesi
-
-set guifont=RictyDiscord-Regular-Powerline.ttf
-"set guifont=Inconsolata_for_Powerline:h11:cANSI
-let g:Powerline_symbols='fancy'
 
 
 " #### 色関連の設定はcolorの方で行うこと
-
-set encoding=utf-8
-scriptencoding utf-8
+" ○や□の文字が崩れる問題を回避
+set ambiwidth=double
 
 " backspaceの有効化
 set backspace=indent,eol,start
@@ -137,17 +132,16 @@ if &term =~ "xterm"
 endif
 
 "" ### マウスでカーソル・スクロール移動可 ######
-"if has('mouse')
-"    set mouse=a
-"    if has('mouse_sgr')
-"        set ttymouse=sgr
-"    elseif v:version > 703 || v:version is 703 && has('patch632')
-"        set ttymouse=sgr
-"    else
-"        set ttymouse=xterm2
-"    endif
-"endif
+if has('mouse')
+    set mouse=a
+    if has('mouse_sgr')
+        set ttymouse=sgr
+    elseif v:version > 703 || v:version is 703 && has('patch632')
+        set ttymouse=sgr
+    else
+        set ttymouse=xterm2
+    endif
+endif
 
 
 colorscheme mycolors
-
