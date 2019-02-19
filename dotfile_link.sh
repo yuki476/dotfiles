@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # 設定用ディレクトリ作成
 mkdir ~/.vim
 mkdir ~/.vim/undo
