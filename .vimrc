@@ -32,14 +32,14 @@ let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
 
 " ## vim-airline ###################################################
-let g:airline_theme = 'dark_minimal'
+let g:airline_theme = 'hybridline'
 set laststatus=2
 set t_Co=256 "この設定が無いと色がちゃんと出ない
 set showtabline=2 "常にタブラインを表示
 
 " PolerLineフォント有効
 let g:airline_powerline_fonts=1
-let g:Powerline_symbols='fancy'
+let g:Powerline_symbols='compatible'
 
 " ##### airline extensionの設定 ################
 " read-onlyインジケータON
@@ -71,7 +71,7 @@ let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'y', 'z', 'war
 "let g:airline_section_c = airline#section#create(['buffreline'または'firename'])
 
 "let g:airline_section_x = airline#section#create(['tagbar', 'filetype', 'virtualenv'])
-let g:airline_section_x = airline#section#create(['tagbar', 'filetype'])
+"let g:airline_section_x = airline#section#create(['tagbar', 'filetype'])
 "let g:airline_section_y = airline#section#create(['fileencoding', 'fileformat'])
 "let g:airline_section_z = airline#section#create(['percentage', 'line number', 'column number'])
 
@@ -95,7 +95,8 @@ set cursorcolumn
 
 " 不可視文字を表示 tab/改行
 set list
-set listchars=tab:>-,eol:$
+set listchars=tab:>-,eol:<
+"
 
 " beep音の視覚化
 set visualbell
