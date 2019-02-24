@@ -48,8 +48,8 @@ hi NonText         ctermfg=18
 
 " 現在行の表示
 hi Cursor          ctermfg=16  ctermbg=253
-hi CursorLine                  ctermbg=235    cterm=underline
-hi CursorColumn                ctermbg=233
+hi CursorLine                  ctermbg=17    cterm=underline
+hi CursorColumn                ctermbg=17
 hi ColorColumn                 ctermbg=236
 " 行番号の表示
 hi LineNr          ctermfg=208 ctermbg=236   cterm=NONE
@@ -133,5 +133,5 @@ hi WildMenu        ctermfg=81  ctermbg=16
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
-"set background=dark
+set background=dark
 
