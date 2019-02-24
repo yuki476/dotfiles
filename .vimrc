@@ -60,7 +60,7 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 1
 " straightデザイン適用時のtabulineの右側区切り文字設定
 let g:airline#extensions#tabline#left_sep = '|'
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#tabline#fnamemod = ':t'
 
 
 " airlineレイアウト設定
